@@ -1,0 +1,33 @@
+body{
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
+h1, h2{
+text-align: center;
+}
+.nav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    background-color: #241f00;
+    
+    width: 100%;
+    z-index: 1;
+   }
+   .linav{
+    float: left;
+   }
+   li a{
+    text-decoration: none;
+    color: #07b8f2;
+    text-align: center;
+    padding: 12px;
+    display: block;
+   }
+   li a:hover{
+    color:black;
+    background-color: white;
+   }
+  
