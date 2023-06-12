@@ -1,0 +1,471 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+}
+html{
+  height: 100%;
+}
+h1{
+    text-align: center;
+    margin: 0%;
+}
+h3{
+    text-align: center;
+    padding: auto;
+    margin: 0 0 10px 0;
+    
+}
+h2{
+  background-color:  #241f00;
+  color: white;
+  padding: 20px;
+  letter-spacing: 3px;
+  text-align: center;
+  vertical-align: middle;
+}
+.table{
+  height: 100%;
+  max-width: 100%;
+  margin-top: 5%;
+  
+}
+.help {
+  color: #0a0606;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  display: none;
+}
+.helpAnimation {
+  height:2rem;
+  overflow:hidden;
+  
+}
+.helpAnimation > div > div {
+  padding: 0.25rem 0.75rem;
+  height:2rem;
+  margin-bottom: 2.5rem;
+  
+}
+.helpAnimation div:first-child {
+  animation: text-animation 15s 2s;
+}
+@keyframes text-animation {
+  0% {margin-top: 0;}
+  30% {margin-top: 0;}
+  65% {margin-top: -3rem;}
+  100% {margin-top: -5.5rem;}
+    
+}
+.figure{
+  width: auto;
+  height: 70%;
+  display: grid;
+  grid-template-columns: 10% 7% 5% 5% 10% 5% 5% 5% 48%;
+  grid-template-areas: 
+  '. . . . . . . . .'
+  '. raise face face . . . . crowd'
+  '. leftArm body body rightArm matHunt matHunt matHunt crowd'
+  '. . leftLeg rightLeg . . . . crowd';
+  grid-template-rows: 25% 15% 35% 25%;
+  justify-content: center;
+  
+  
+}
+.huntMat{
+  grid-area: matHunt;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-areas: 'bow arrow aHead';
+  justify-content: flex-start;
+  display: none;
+}
+
+#face{
+  width: 60%;
+  grid-area: face;
+  background-color: black;
+  border-radius: 50%;
+  justify-self: center;
+}
+
+#raisearm{
+  grid-area: raise;
+  background-color: black;
+  width: 20%;
+  height: 70%;
+  margin: 10px 0 0 10px;
+  border-radius: 20% 20%  30% 40% ;
+}
+
+#leftarm{
+  grid-area: leftArm;
+  background-color: black;
+  width: 100%;
+  height: 17%;
+  border-radius: 20% 20% 20% 80%;
+  vertical-align: top;
+  transform: rotate(20deg);
+  margin: -10px 0 0 10px;
+}
+#rightArm{
+  grid-area: rightArm;
+  background-color: black;
+  width: 20%;
+  height: 70%;
+  vertical-align: top;
+  border-radius: 20% 80% 40% 20% ;
+  transform: rotate(-20deg);
+}
+#bow{
+  grid-area: bow;
+  border: solid black;
+  border-width: 3px 6px 3px 0px;
+  border-radius: 30px 50px 50px 30px;
+  height: 50%;
+  width: 40px;
+  padding: 3px;
+  vertical-align: text-top;
+  margin: -35px 0 0 -50px;
+}
+#arrow{
+  grid-area: arrow; 
+  height: 4%;
+  width: 50%;
+  margin: 11px 0 0 -100px;
+  color: red;
+  z-index: 5;
+  position: relative;
+}
+#arrowHead{
+  grid-area: aHead;
+  width: 0;
+	height: 0;
+	border-top: 8px solid transparent;
+	border-left: 15px solid red;
+	border-bottom: 8px solid transparent;
+  margin: 7px 0 0 0px;
+  position: relative;
+}
+#body{
+  grid-area: body;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  border-radius: 20% 20% 50% 50%;
+  justify-self: center;
+}
+
+#rightleg{
+  grid-area: rightLeg;
+  background-color: black;
+  width: 45%;
+  height: auto;
+  border-radius: 0 20% 20% 40%;
+  margin: -35px 0 0 0;
+  justify-self: center;
+}
+#leftleg{
+  grid-area: leftLeg;
+  background-color: black;
+  width: 45%;
+  height: auto;
+  border-radius: 20% 0 40% 20%;
+  margin-top: -35px;
+  justify-self: center;
+}
+#crowd{
+  grid-area: crowd;
+  background-image: url(./pic/crowd.jpg);
+  background-size: contain;
+  background-position: right;
+}
+  
+  /*Navigation Bar*/
+ .nav{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  background-color: #241f00;
+  
+  width: 100%;
+  z-index: 1;
+ }
+ .linav{
+  float: left;
+ }
+ li a{
+  text-decoration: none;
+  color: #07b8f2;
+  text-align: center;
+  padding: 12px;
+  display: block;
+ }
+ li a:hover{
+  color:black;
+  background-color: white;
+ }
+
+
+/*SKILLS */
+
+.mainContent{
+  display: grid;
+  height: 100%;
+  grid-template-areas: 
+  'tech tech name name name .'
+  'tech tech title title title .'
+  'hr hr title title title .'
+  'hr hr link link link .';
+  grid-template-columns: 15% 15% 20% 20% 15% 15%;
+  grid-template-rows: 20% 30% 20% 30%;
+  background-image:url(./pic/Don.jpg) ;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.techSkills{
+  display: grid;
+  height: 100%;
+  grid-template-areas: 
+  'techSkills techSkills'
+  'htmlFunc htmlStar'
+  'cssFunc cssStar'
+  'jsFunc jsStar'
+  'frontFunc frontStar'
+  'techMsg techMsg';
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+}
+
+/* GRID AREA */
+.techSkillList{grid-area: techSkills;}
+.htmlFunction{grid-area: htmlFunc;}
+.htmlStar{grid-area: htmlStar;}
+.cssFunction{grid-area: cssFunc;}
+.cssStar{grid-area: cssStar;}
+.javascriptFunction{grid-area: jsFunc;}
+.javascriptStar{grid-area: jsStar;}
+.frontendFunction{grid-area: frontFunc;}
+.frontendStar{grid-area: frontStar;}
+.techMsg {
+  grid-area: techMsg;
+  border: 3px solid black;
+  justify-self: center;
+}
+#msgTech{
+  color: black;
+}
+.newMsg{
+  background-color: #0a0606;
+  color: white;
+  text-align: center;
+}
+.grid-hrKpi{grid-area: hr;}
+.grid-techKpi{grid-area: tech;}
+.grid-name{grid-area: name;}
+.grid-link{
+  grid-area: link;
+  text-align: center;
+  width: 100%;
+}
+.socLink{
+  padding: 10px;
+}
+.grid-title{grid-area: title;}
+
+/* NAME DESCRIPTION */
+.name {
+  color: gold;
+  font-family: 'Roboto', sans-serif;
+  font-size: 5vw;
+  text-decoration-line: underline;
+  text-decoration-color: black;
+  text-decoration-thickness: 20%;
+  text-align: left;
+  padding: 70px 0 0 50px;
+}
+#techy{
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 10rem;  
+}
+
+#hr {
+  color: gold;
+  font-family: 'Roboto', sans-serif;
+  font-size: 10rem;
+  
+}
+.word {
+  position: relative;
+  opacity: 0;
+}
+
+
+
+
+.htmlRating, .cssRating, .javascriptRating, .frontendRating{
+  list-style-type: none;
+  padding: 0%;
+ }
+ .star{
+  display: inline-block;
+  font-size: 2.5vw;
+  color: #ddd;
+  cursor: pointer;
+ }
+ 
+ 
+ .htmlStar, .cssStar, .javascriptStar, .frontendStar{
+  padding: 0%;
+  margin: auto;
+ }
+
+ .rateHtml, .rateCss, .rateFrontend, .rateJavascript{
+  display: inline;
+ }
+ .htmlFunction, .cssFunction, .javascriptFunction, .frontendFunction{
+  margin: auto;
+ }
+ 
+ .endorseBox{
+  display: block;
+  border: #0a0606;
+  background-color: darkgray;
+  border-radius: 10px;
+  width: 80%;
+  margin: auto;
+  margin-top: 4px;
+  box-shadow: 14px;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+ }
+ .endorseBox:hover{
+  background-color: #0a0606;
+  color: white;
+ }
+.modal{
+  height: auto;
+  width: 90%;
+  margin: auto;
+  background-color: rgba(0, 0, 0, .5);
+  border: 2px solid black;
+  text-align: center;
+  position: absolute;
+  display: none;
+  z-index: 10;
+}
+.active{
+  display: block;
+  transform: translate(10%, 10%);
+}
+.modalDetails{
+  margin: 20% 10% 0 10%;
+}
+.modalDetails > h1{
+  padding: 10px;
+  font-size: 4vw;
+  
+}
+.modalDetails > p{
+  padding: 10px;
+  
+}
+
+.modalBgc{
+  
+  margin: auto;
+  height: 65%;
+  width: 65%;
+  background-color: white;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+ .fa-layers{
+  display: inline-block;
+  margin: 10px 20px 0 0;
+  padding: 15px;
+ }
+
+ #iconLike{
+  justify-self:  right;
+  
+ }
+
+ #iconBack{
+  display: inline;
+  float: left;
+  margin-left: 50px;
+  margin-top: 20px;
+  
+ }
+ .fa-brands{
+  padding: 20px;
+  
+ }
+
+ /* RESPONSIVE */
+
+ @media only screen and (max-width: 700px) {
+  
+  .table{
+    display: none;
+  }
+  .mainContent{
+    display: grid;
+    height: auto;
+    grid-template-areas: 
+    'name name name .'
+    'title title title .'
+    'tech tech tech tech'
+    'hr hr hr hr'
+    'link link link link';
+    grid-template-columns: 30% 30% 15% 25%;
+    background-image:url(./pic/Don.jpg) ;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    
+  }
+  
+  .grid-hrKpi{
+    margin-top: 120px;  
+  }
+  .word{
+    opacity: 1;
+    font-size-adjust: inherit;
+  }
+  .name{
+    font-size: 7vw;
+    color: black;
+    text-decoration-color: gold;
+  }
+  #techy, #hr{
+    font-size: 20vw;
+  }
+ .grid-link{
+  margin-top: 80px;
+ }
+ 
+  .grid-link  i{
+    font-size: 5vw;
+  }
+  
+    .grid-link h1{
+      font-size: 7vw;
+    }
+    .modal{
+      position: fixed;
+    }
+    .star{
+      font-size: 7vw;
+    }
+  }
+  
+ 
+ 
